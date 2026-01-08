@@ -24,7 +24,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
-        uses: martin-mfg/github-readme-stats-action@V1.1.0
+        uses: martin-mfg/github-readme-stats-action@v1.1.1
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
