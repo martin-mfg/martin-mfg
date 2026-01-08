@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate stats card
-        uses: martin-mfg/github-readme-stats-action@V1.1.0
+        uses: martin-mfg/github-readme-stats-action@V1.1.1
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
