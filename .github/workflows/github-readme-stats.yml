@@ -16,12 +16,12 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate stats card
-        uses: qoomon/github-readme-stats-action@ffc83abacd5580718b54cb4f1f90de30070f01d9
+        uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
           path: profile/stats.svg
-          # token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
