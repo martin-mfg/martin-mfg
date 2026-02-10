@@ -45,7 +45,7 @@ jobs:
           card: gist
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
           path: profile/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT }}
 
       - name: Commit cards
         run: |
