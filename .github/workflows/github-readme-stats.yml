@@ -12,6 +12,12 @@ jobs:
     permissions:
       contents: write
 
+    if: |
+      github.repository == 'anuraghazra/github-readme-stats' ||
+      github.repository == 'stats-organization/github-readme-stats' || 
+      github.repository == 'stats-organization/github-stats-extended' ||
+      github.repository == 'martin-mfg/martin-mfg'
+
     steps:
       - uses: actions/checkout@v6
 
