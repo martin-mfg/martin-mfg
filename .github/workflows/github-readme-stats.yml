@@ -46,6 +46,13 @@ jobs:
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
           path: profile/gist.svg
           token: ${{ secrets.PAT }}
+      - name: Generate wakatime card
+        uses: readme-tools/github-readme-stats-action@b4d2ef3b8051484b318d455163153b23a2b35fa2 # v1.1.0
+        with:
+          card: wakatime
+          options: username=alan
+          path: profile/wakatime.svg
+          token: ${{ secrets.PAT }}
 
       - name: Commit cards
         run: |
