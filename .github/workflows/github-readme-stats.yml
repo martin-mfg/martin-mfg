@@ -21,7 +21,7 @@ jobs:
           card: gist
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
           path: profile/gist.svg
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
