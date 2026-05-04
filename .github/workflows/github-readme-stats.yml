@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate gist card
-        uses: readme-tools/github-readme-stats-action@e925b8b22589ae4bec5a2cb262fb8319062f8290
+        uses: readme-tools/github-readme-stats-action@ce44f8f64a4b44b1723c8fd6f4338191d1a9054c
         with:
           card: gist
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
@@ -48,7 +48,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate wakatime card
-        uses: readme-tools/github-readme-stats-action@e925b8b22589ae4bec5a2cb262fb8319062f8290
+        uses: readme-tools/github-readme-stats-action@ce44f8f64a4b44b1723c8fd6f4338191d1a9054c
         with:
           card: wakatime
           options: username=alan
