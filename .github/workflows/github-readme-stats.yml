@@ -30,14 +30,6 @@ jobs:
           path: profile/top-langs-package.svg
           core_version: latest
 
-      - name: Generate card via pre-release version, invalid version
-        uses: readme-tools/github-readme-stats-action@github-stats-extended
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&hide_values=true
-          path: profile/top-langs-package.svg
-          core_version: 1
-
       - name: Generate gist card
         uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1.2.0
         with:
