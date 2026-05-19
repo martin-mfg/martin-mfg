@@ -1,8 +1,8 @@
 
       <svg
         width="400"
-        height="140"
-        viewBox="0 0 400 140"
+        height="150"
+        viewBox="0 0 400 150"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -21,9 +21,12 @@
             .header { font-size: 15.5px; }
           }
           
-    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .description {
+      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;fill: #434d58;
+      
+    }
     .gray { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
-    .icon { fill: #4c71f2 }
+    .icon { fill: #586069 }
   
 
           
@@ -96,10 +99,10 @@
         >
           
     <text class="description" x="25" y="-5">
-        <tspan dy="1.2em" x="25">demo for</tspan><tspan dy="1.2em" x="25">https://github.com/OpenAPITools/openapi-generator/pull/16732</tspan>
+        <tspan dy="1.2em" x="25">demo for</tspan><tspan dy="1.2em" x="25">https://github.com/OpenAPITools/openapi-generator/pull/1</tspan><tspan dy="1.2em" x="25">6732</tspan>
     </text>
 
-    <g transform="translate(30, 65)">
+    <g transform="translate(30, 75)">
         <g transform="translate(0, 0)">
     <g data-testid="primary-lang">
       <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#85ea2d" />
