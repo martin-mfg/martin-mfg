@@ -23,7 +23,7 @@ jobs:
           path: profile/top-langs-package.svg
 
       - name: Generate card via pre-release version, 'latest' version
-        uses: readme-tools/github-readme-stats-action@github-stats-extended
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
