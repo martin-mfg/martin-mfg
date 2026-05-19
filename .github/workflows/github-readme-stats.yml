@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate card via pre-release version
-        uses: readme-tools/github-readme-stats-action@github-stats-extended
+      - name: Generate card via old version
+        uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
@@ -31,7 +31,7 @@ jobs:
           core_version: latest
 
       - name: Generate gist card
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1.2.0
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: gist
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
@@ -39,7 +39,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
@@ -47,7 +47,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
@@ -55,7 +55,7 @@ jobs:
           # token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate pin card
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: pin
           options: username=readme-tools&repo=github-readme-stats
@@ -63,7 +63,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate wakatime card
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be # v1.2.0
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: wakatime
           options: username=alan
