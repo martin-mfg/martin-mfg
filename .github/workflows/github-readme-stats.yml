@@ -16,14 +16,14 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate card via old version
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: stats-organization/github-readme-stats-action@v1
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
           path: profile/top-langs-package.svg
 
       - name: Generate card via pre-release version, 'latest' version
-        uses: readme-tools/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
@@ -31,7 +31,7 @@ jobs:
           core_version: latest
 
       - name: Generate gist card
-        uses: readme-tools/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: gist
           options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
@@ -39,7 +39,7 @@ jobs:
           token: ${{ secrets.PAT }}
 
       - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v2
+        uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
