@@ -28,7 +28,6 @@ jobs:
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
-          path: profile/top-langs-package.svg
           core_version: latest
 
       - name: Print generated path
