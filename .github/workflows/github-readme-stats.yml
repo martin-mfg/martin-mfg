@@ -22,8 +22,8 @@ jobs:
           options: username=${{ github.repository_owner }}&hide_values=true
           path: profile/top-langs-package.svg
 
-      - name: Generate card via 'master' & 'latest', print output
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: Generate card via 'main' & 'latest', print output
+        uses: stats-organization/github-readme-stats-action@main
         id: statswithoutput
         with:
           card: top-langs
