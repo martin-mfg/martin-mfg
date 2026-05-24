@@ -32,7 +32,7 @@ jobs:
           core_version: latest
 
       - name: Print generated path
-        run: echo "Generated SVG path: ${{ steps.statswithoutput.outputs.path }}"
+        run: echo "Generated SVG path - ${{ steps.statswithoutput.outputs.path }}"
 
       - name: Generate card via pre-release version, 'latest' version
         uses: stats-organization/github-readme-stats-action@v2
