@@ -15,6 +15,33 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Query GitHub GraphQL API for stargazerCount
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl --location 'https://api.github.com/graphql' \
+            --header 'Content-Type: application/json' \
+            --header "Authorization: Bearer $GITHUB_TOKEN" \
+            --data '{"query":"query userInfo($login: String!) {\r\n  user(login: $login) {\r\n    repositories(first: 100, orderBy: { direction: DESC, field: STARGAZERS }) {\r\n      totalCount\r\n      nodes {\r\n        name\r\n        stargazerCount\r\n      }\r\n    }\r\n  }\r\n}\r\n","variables":{"login":"rickstaa"}}'
+
+      - name: Query GitHub GraphQL API for stargazers.totalCount
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl --location 'https://api.github.com/graphql' \
+            --header 'Content-Type: application/json' \
+            --header "Authorization: Bearer $GITHUB_TOKEN" \
+            --data '{"query":"query userInfo($login: String!) {\r\n  user(login: $login) {\r\n    repositories(first: 100, orderBy: { direction: DESC, field: STARGAZERS }) {\r\n      totalCount\r\n      nodes {\r\n        name\r\n        stargazers {\r\n          totalCount\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n","variables":{"login":"rickstaa"}}'
+
+      - name: Query GitHub GraphQL API for stargazerCount
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl --location 'https://api.github.com/graphql' \
+            --header 'Content-Type: application/json' \
+            --header "Authorization: Bearer $GITHUB_TOKEN" \
+            --data '{"query":"query userInfo($login: String!) {\r\n  user(login: $login) {\r\n    repositories(first: 100, orderBy: { direction: DESC, field: STARGAZERS }) {\r\n      totalCount\r\n      nodes {\r\n        name\r\n        stargazerCount\r\n      }\r\n    }\r\n  }\r\n}\r\n","variables":{"login":"rickstaa"}}'
+
       - name: Generate card via old version
         uses: stats-organization/github-readme-stats-action@v1
         with:
