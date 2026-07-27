@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate failing card with and error out
-        uses: stats-organization/github-readme-stats-action@main.
+        uses: stats-organization/github-readme-stats-action@main
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
