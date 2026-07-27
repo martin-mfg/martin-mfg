@@ -15,14 +15,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Generate failing card with and error out
+      - name: Generate failing card
         uses: stats-organization/github-readme-stats-action@main
         with:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
           path: profile/stats-v213.svg
           core_version: v2.1.3
-          fail_on_error: true
 
       - name: Query GitHub GraphQL API for stargazerCount
         env:
