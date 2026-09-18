@@ -71,7 +71,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: gist
-          options: username=${{ github.repository_owner }}&id=e10c711269678565c0407e17071b7574&show_owner=false
+          options: id=e10c711269678565c0407e17071b7574&show_owner=false
           path: profile/gist.svg
           token: ${{ secrets.PAT }}
 
