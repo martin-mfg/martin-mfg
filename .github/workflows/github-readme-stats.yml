@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: validation branch - Generate pin card
-        uses: readme-tools/github-readme-stats-action@v2
+        uses: readme-tools/github-readme-stats-action@validation
         with:
           card: pin
           options: repo=github-readme-stats
@@ -24,7 +24,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: validation branch - Generate with json
-        uses: readme-tools/github-readme-stats-action@v2
+        uses: readme-tools/github-readme-stats-action@validation
         with:
           card: stats
           options: '{"show_icons":true,"hide_rank":true}'
