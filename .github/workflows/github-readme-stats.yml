@@ -15,6 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: validation branch - Generate pin card
+        uses: readme-tools/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: repo=github-readme-stats
+          path: profile/validation1.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: validation branch - Generate with json
+        uses: readme-tools/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: '{"show_icons":true,"hide_rank":true}'
+          path: profile/validation2.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Generate failing card
         uses: stats-organization/github-readme-stats-action@main
         with:
