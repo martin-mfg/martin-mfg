@@ -45,6 +45,7 @@ jobs:
           options: id=e10c711269678565c0407e17071b7574&show_owner=false
           core_version: latest
           path: profile/gist-latest.svg
+          token: ${{ secrets.PAT }}
 
       - name: Generate card via 'main' & 'latest' - pin
         uses: stats-organization/github-readme-stats-action@main
