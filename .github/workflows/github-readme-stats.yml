@@ -23,24 +23,6 @@ jobs:
           path: profile/stats-v213.svg
           core_version: v2.1.3
 
-      - name: Query GitHub GraphQL API for stargazerCount
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl --location 'https://api.github.com/graphql' \
-            --header 'Content-Type: application/json' \
-            --header "Authorization: Bearer $GITHUB_TOKEN" \
-            --data '{"query":"query userInfo($login: String!) {\r\n  user(login: $login) {\r\n    repositories(first: 100, orderBy: { direction: DESC, field: STARGAZERS }) {\r\n      totalCount\r\n      nodes {\r\n        name\r\n        stargazerCount\r\n      }\r\n    }\r\n  }\r\n}\r\n","variables":{"login":"rickstaa"}}'
-
-      - name: Query GitHub GraphQL API for stargazers.totalCount
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          curl --location 'https://api.github.com/graphql' \
-            --header 'Content-Type: application/json' \
-            --header "Authorization: Bearer $GITHUB_TOKEN" \
-            --data '{"query":"query userInfo($login: String!) {\r\n  user(login: $login) {\r\n    repositories(first: 100, orderBy: { direction: DESC, field: STARGAZERS }) {\r\n      totalCount\r\n      nodes {\r\n        name\r\n        stargazers {\r\n          totalCount\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n","variables":{"login":"rickstaa"}}'
-
       - name: Generate card via old version
         uses: stats-organization/github-readme-stats-action@v1
         with:
@@ -48,13 +30,46 @@ jobs:
           options: username=${{ github.repository_owner }}&hide_values=true
           path: profile/top-langs-package.svg
 
-      - name: Generate card via 'main' & 'latest', print output
+      - name: Generate card via 'main' & 'latest' - stats
+        uses: stats-organization/github-readme-stats-action@main
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide_values=true
+          core_version: latest
+          path: profile/stats-latest.svg
+
+      - name: Generate card via 'main' & 'latest' - gist
+        uses: stats-organization/github-readme-stats-action@main
+        with:
+          card: gist
+          options: id=e10c711269678565c0407e17071b7574&show_owner=false
+          core_version: latest
+          path: profile/gist-latest.svg
+
+      - name: Generate card via 'main' & 'latest' - pin
+        uses: stats-organization/github-readme-stats-action@main
+        with:
+          card: pin
+          options: repo=openapitools/openapi-generator
+          core_version: latest
+          path: profile/pin-latest.svg
+
+      - name: Generate card via 'main' & 'latest' - WakaTime
+        uses: stats-organization/github-readme-stats-action@main
+        with:
+          card: wakatime
+          options: username=alan
+          core_version: latest
+          path: profile/wakatime-latest.svg
+
+      - name: Generate card via 'main' & 'latest' - Top Langs, print output
         uses: stats-organization/github-readme-stats-action@main
         id: statswithoutput
         with:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
           core_version: latest
+          path: profile/top-langs-latest.svg
 
       - name: Print generated path
         run: echo "Generated SVG path - ${{ steps.statswithoutput.outputs.path }}"
