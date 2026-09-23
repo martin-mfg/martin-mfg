@@ -17,6 +17,7 @@ jobs:
 
       - name: Generate card via 'main' & 'latest' - stats - error
         uses: stats-organization/github-readme-stats-action@add-error-details
+        id: error1
         with:
           card: stats
           options: username=waegawegawsgadfQ&hide_values=true
@@ -25,11 +26,18 @@ jobs:
 
       - name: Generate card via 'main' & 'latest' - gist - error
         uses: stats-organization/github-readme-stats-action@add-error-details
+        id: error2
         with:
           card: gist
           options: id=e10c711269678565c0407e17071b7574&show_owner=false
           core_version: latest
           path: profile/gist-error.svg
+
+      - name: Print error details
+        run: echo "error details - ${{ steps.error1.outputs.error_type }} ; ${{ steps.error1.outputs.error_message }} ; ${{ steps.error1.outputs.error_secondary_message }}"
+
+      - name: Print error details
+        run: echo "error details - ${{ steps.error2.outputs.error_type }} ; ${{ steps.error2.outputs.error_message }} ; ${{ steps.error2.outputs.error_secondary_message }}"
 
       - name: Generate failing card
         uses: stats-organization/github-readme-stats-action@main
