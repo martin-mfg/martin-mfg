@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Generate card via 'main' & 'latest' - stats
-        uses: stats-organization/github-readme-stats-action@add-error-details
+        uses: stats-organization/github-readme-stats-action@main
         id: success1
         with:
           card: stats
