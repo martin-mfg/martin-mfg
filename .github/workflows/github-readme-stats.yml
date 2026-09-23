@@ -15,6 +15,22 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Generate card via 'main' & 'latest' - stats - error
+        uses: stats-organization/github-readme-stats-action@add-error-details
+        with:
+          card: stats
+          options: username=waegawegawsgadfQ&hide_values=true
+          core_version: latest
+          path: profile/stats-error.svg
+
+      - name: Generate card via 'main' & 'latest' - gist - error
+        uses: stats-organization/github-readme-stats-action@add-error-details
+        with:
+          card: gist
+          options: id=e10c711269678565c0407e17071b7574&show_owner=false
+          core_version: latest
+          path: profile/gist-error.svg
+
       - name: Generate failing card
         uses: stats-organization/github-readme-stats-action@main
         with:
