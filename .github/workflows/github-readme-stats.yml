@@ -15,6 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Generate card via 'main' & 'latest' - stats
+        uses: stats-organization/github-readme-stats-action@main
+        id: success1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&hide_values=true
+          core_version: latest
+          path: profile/stats-latest.svg
+
       - name: Generate card via 'main' & 'latest' - stats - error
         uses: stats-organization/github-readme-stats-action@add-error-details
         id: error1
@@ -28,6 +37,9 @@ jobs:
 
       - name: Print error details
         run: echo "error details - ${{ steps.error1.outputs.error_type }} ; ${{ steps.error1.outputs.error_message }} ; ${{ steps.error1.outputs.error_secondary_message }}"
+
+      - name: Print error details
+        run: echo "error details - ${{ steps.success1.outputs.error_type }} ; ${{ steps.success1.outputs.error_message }} ; ${{ steps.success1.outputs.error_secondary_message }}"
 
       - name: Generate failing card
         uses: stats-organization/github-readme-stats-action@main
@@ -43,14 +55,6 @@ jobs:
           card: top-langs
           options: username=${{ github.repository_owner }}&hide_values=true
           path: profile/top-langs-package.svg
-
-      - name: Generate card via 'main' & 'latest' - stats
-        uses: stats-organization/github-readme-stats-action@main
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&hide_values=true
-          core_version: latest
-          path: profile/stats-latest.svg
 
       - name: Generate card via 'main' & 'latest' - gist
         uses: stats-organization/github-readme-stats-action@main
