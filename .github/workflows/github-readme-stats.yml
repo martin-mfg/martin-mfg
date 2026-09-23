@@ -20,7 +20,7 @@ jobs:
         id: success1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&hide_values=true
+          options: hide_values=true
           core_version: latest
           path: profile/stats-latest.svg
 
