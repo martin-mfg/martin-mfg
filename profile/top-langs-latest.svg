@@ -134,7 +134,7 @@
       
     <svg width="250" x="0" y="25">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="250" height="8"></rect>
-      <svg data-testid="lang-progress" width="61.014479086209796%">
+      <svg data-testid="lang-progress" width="49.93829839825829%">
         <rect
             height="8"
             fill="#e34c26"
@@ -153,7 +153,7 @@
       
     <svg width="250" x="0" y="25">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="250" height="8"></rect>
-      <svg data-testid="lang-progress" width="34.96919046853625%">
+      <svg data-testid="lang-progress" width="29.08721940927083%">
         <rect
             height="8"
             fill="#f1e05a"
@@ -167,15 +167,15 @@
     </g>
   </g><g transform="translate(0, 80)">
     <g class="stagger" style="animation-delay: 750ms">
-      <text data-testid="lang-name" x="2" y="15" class="lang-name">C++</text>
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">TypeScript</text>
       
       
     <svg width="250" x="0" y="25">
       <rect data-testid="progress-background" class="progress-background" rx="5" ry="5" x="0" y="0" width="250" height="8"></rect>
-      <svg data-testid="lang-progress" width="2.0706280684968483%">
+      <svg data-testid="lang-progress" width="18.66635167444304%">
         <rect
             height="8"
-            fill="#f34b7d"
+            fill="#3178c6"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 1050ms;"
@@ -186,7 +186,7 @@
     </g>
   </g><g transform="translate(0, 120)">
     <g class="stagger" style="animation-delay: 900ms">
-      <text data-testid="lang-name" x="2" y="15" class="lang-name">TypeScript</text>
+      <text data-testid="lang-name" x="2" y="15" class="lang-name">C++</text>
       
       
     <svg width="250" x="0" y="25">
@@ -194,7 +194,7 @@
       <svg data-testid="lang-progress" width="2%">
         <rect
             height="8"
-            fill="#3178c6"
+            fill="#f34b7d"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 1200ms;"
