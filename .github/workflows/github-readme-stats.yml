@@ -127,6 +127,22 @@ jobs:
           path: profile/wakatime.svg
           token: ${{ secrets.PAT }}
 
+      - name: Generate stats card for anuraghazra - no env vars
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=anuraghazra&show_icons=true
+          path: profile/stats-anuraghazra.svg
+
+      - name: Generate stats card for anuraghazra - FETCH_MULTI_PAGE_STARS=10
+        uses: stats-organization/github-readme-stats-action@v2
+        env:
+          FETCH_MULTI_PAGE_STARS: "10"
+        with:
+          card: stats
+          options: username=anuraghazra&show_icons=true
+          path: profile/stats-anuraghazra-multipage-stars.svg
+
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
