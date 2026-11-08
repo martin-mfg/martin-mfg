@@ -131,7 +131,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=anuraghazra&show_icons=true
+          options: username=anuraghazra&number_format=long
           path: profile/stats-anuraghazra.svg
 
       - name: Generate stats card for anuraghazra - FETCH_MULTI_PAGE_STARS=10
@@ -140,7 +140,7 @@ jobs:
           FETCH_MULTI_PAGE_STARS: "10"
         with:
           card: stats
-          options: username=anuraghazra&show_icons=true
+          options: username=anuraghazra&number_format=long
           path: profile/stats-anuraghazra-multipage-stars.svg
 
       - name: Commit cards
